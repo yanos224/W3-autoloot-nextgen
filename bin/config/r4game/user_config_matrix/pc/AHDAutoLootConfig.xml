@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<UserConfig>
+	<Group id="AHDAutoLoot_loadpresets" displayName="Mods.ahdal_modName.ahdal_loadpresets">
+		<VisibleVars>
+			<Var id="loadPresetHerb" displayName="ahdal_loadpresetHerbs" displayType="TOGGLE" />
+			<Var id="loadPresetCorpse" displayName="ahdal_loadpresetCorpses" displayType="TOGGLE" />
+			<Var id="loadPresetHerbCorpse" displayName="ahdal_loadpresetHerbsCorpses" displayType="TOGGLE" />
+			<Var id="loadPresetOneItem" displayName="ahdal_loadpresetOneItem" displayType="TOGGLE" />
+			<Var id="loadPresetValuableGear" displayName="ahdal_loadpresetValuableGear" displayType="TOGGLE" />
+			<Var id="loadPresetWeightless" displayName="ahdal_loadpresetWeightless" displayType="TOGGLE" />
+			<Var id="isLoaded" displayName="isLoaded" displayType="TOGGLE" visibilityCondition="hideAlways" />
+		</VisibleVars>
+	</Group>
+	<Group id="AHDAutoLoot_settings" displayName="Mods.ahdal_modName.ahdal_settings">
+		<PresetsArray>
+			<Preset id="0" displayName="ahdal_default">
+				<Entry varId="useAutoLoot" value="true"/>
+				<Entry varId="useFilters" value="false"/>
+				<Entry varId="Virtual_filterLogic" value="0"/>
+				<Entry varId="useNoAccidentalStealing" value="true"/>
+				<Entry varId="disableStealing" value="false"/>
+				<Entry varId="enableOnKillLoot" value="false"/>
+				<Entry varId="forceQuestLoot" value="false"/>
+				<Entry varId="fullReset" value="false"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="useAutoLoot" displayName="ahdal_modToggle" displayType="TOGGLE" />
+			<Var id="useFilters" displayName="ahdal_filterToggle" displayType="TOGGLE" />
+			<Var id="Virtual_filterLogic" displayName="ahdal_filterLogic" displayType="OPTIONS" >
+				<OptionsArray>
+					<Option id="0" displayName="ahdal_slidersAny">
+						<Entry varId="filterLogic" value="0"/>
+					</Option>
+					<Option id="1" displayName="ahdal_slidersAll">
+						<Entry varId="filterLogic" value="1"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="useNoAccidentalStealing" displayName="ahdal_noStealing" displayType="TOGGLE" />
+			<Var id="disableStealing" displayName="ahdal_disableStealing" displayType="TOGGLE" />
+			<Var id="enableOnKillLoot" displayName="ahdal_autoLootOnKill" displayType="TOGGLE" />
+			<Var id="forceQuestLoot" displayName="ahdal_forceQuestLoot" displayType="TOGGLE" />
+			<Var id="fullReset" displayName="ahdal_fullReset" displayType="TOGGLE" />
+			<Var id="isLoaded" displayName="isLoaded" displayType="TOGGLE" visibilityCondition="hideAlways" />
+		</VisibleVars>
+	</Group>
+	<Group id="AHDAutoLoot_containers" displayName="Mods.ahdal_modName.ahdal_containers">
+		<PresetsArray>
+			<Preset id="0" displayName="ahdal_default">
+				<Entry varId="useIsHerb" value="false"/>
+				<Entry varId="useIsCorpse" value="false"/>
+				<Entry varId="useQuantity" value="false"/>
+				<Entry varId="quantityAmount" value="15"/>
+				<Entry varId="Virtual_quantityLogic" value="0"/>
+			</Preset>
+			<Preset id="1" displayName="ahdal_presetHerbCont">
+				<Entry varId="useIsHerb" value="true"/>
+				<Entry varId="useIsCorpse" value="false"/>
+				<Entry varId="useQuantity" value="false"/>
+			</Preset>
+			<Preset id="2" displayName="ahdal_presetCorpseCont">
+				<Entry varId="useIsHerb" value="false"/>
+				<Entry varId="useIsCorpse" value="true"/>
+				<Entry varId="useQuantity" value="false"/>
+			</Preset>
+			<Preset id="3" displayName="ahdal_presetOneItem">
+				<Entry varId="useIsHerb" value="false"/>
+				<Entry varId="useIsCorpse" value="false"/>
+				<Entry varId="useQuantity" value="true"/>
+				<Entry varId="quantityAmount" value="1"/>
+				<Entry varId="Virtual_quantityLogic" value="1"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="useIsHerb" displayName="ahdal_herbToggle" displayType="TOGGLE" />
+			<Var id="useIsCorpse" displayName="ahdal_corpsesToggle" displayType="TOGGLE" />
+			<Var id="useQuantity" displayName="ahdal_quantityToggle" displayType="TOGGLE" />
+			<Var id="quantityAmount" displayName="ahdal_quantityThreshold" displayType="SLIDER;1;25;24" />
+			<Var id="Virtual_quantityLogic" displayName="ahdal_quantityLogic" displayType="OPTIONS" >
+				<OptionsArray>
+					<Option id="0" displayName="ahdal_slidersLess">
+						<Entry varId="quantityLogic" value="0"/>
+					</Option>
+					<Option id="1" displayName="ahdal_slidersExact">
+						<Entry varId="quantityLogic" value="1"/>
+					</Option>
+					<Option id="2" displayName="ahdal_slidersGreater">
+						<Entry varId="quantityLogic" value="2"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+		</VisibleVars>
+	</Group>
+	<Group id="AHDAutoLoot_filters" displayName="Mods.ahdal_modName.ahdal_itemFilters">
+		<PresetsArray>
+			<Preset id="0" displayName="ahdal_default">
+				<Entry varId="useIsArmor" value="false"/>
+				<Entry varId="useIsWeapon" value="false"/>
+				<Entry varId="useIsUpgrade" value="false"/>
+				<Entry varId="useIsFood" value="false"/>
+				<Entry varId="useIsFormula" value="false"/>
+				<Entry varId="useIsReadable" value="false"/>
+				<Entry varId="useIsIngredient" value="false"/>
+				<Entry varId="useIsMoney" value="false"/>
+				<Entry varId="useIsNotJunk" value="false"/>
+				<Entry varId="useWeight" value="false"/>
+				<Entry varId="weightAmount" value="1"/>
+				<Entry varId="Virtual_weightLogic" value="0"/>
+				<Entry varId="useValue" value="false"/>
+				<Entry varId="valueAmount" value="100"/>
+				<Entry varId="Virtual_valueLogic" value="0"/>
+				<Entry varId="useItemQuality" value="false"/>
+				<Entry varId="Virtual_qualityThreshold" value="0"/>
+				<Entry varId="Virtual_qualityLogic" value="0"/>
+			</Preset>
+			<Preset id="1" displayName="ahdal_presetUsefulGear">
+				<Entry varId="useIsArmor" value="true"/>
+				<Entry varId="useIsWeapon" value="true"/>
+				<Entry varId="useIsUpgrade" value="true"/>
+				<Entry varId="useIsFood" value="false"/>
+				<Entry varId="useIsFormula" value="false"/>
+				<Entry varId="useIsReadable" value="false"/>
+				<Entry varId="useIsIngredient" value="false"/>
+				<Entry varId="useIsMoney" value="false"/>
+				<Entry varId="useIsNotJunk" value="true"/>
+				<Entry varId="useWeight" value="false"/>
+				<Entry varId="useValue" value="false"/>
+				<Entry varId="useItemQuality" value="true"/>
+				<Entry varId="Virtual_qualityThreshold" value="1"/>
+				<Entry varId="Virtual_qualityLogic" value="2"/>
+			</Preset>
+			<Preset id="2" displayName="ahdal_presetWeightless">
+				<Entry varId="useIsArmor" value="false"/>
+				<Entry varId="useIsWeapon" value="false"/>
+				<Entry varId="useIsUpgrade" value="false"/>
+				<Entry varId="useIsFood" value="false"/>
+				<Entry varId="useIsFormula" value="false"/>
+				<Entry varId="useIsReadable" value="false"/>
+				<Entry varId="useIsIngredient" value="false"/>
+				<Entry varId="useIsMoney" value="false"/>
+				<Entry varId="useIsNotJunk" value="false"/>
+				<Entry varId="useWeight" value="true"/>
+				<Entry varId="weightAmount" value="0"/>
+				<Entry varId="Virtual_weightLogic" value="1"/>
+				<Entry varId="useValue" value="false"/>
+				<Entry varId="useItemQuality" value="false"/>
+			</Preset>
+			<Preset id="3" displayName="ahdal_presetCrafting">
+				<Entry varId="useIsArmor" value="false"/>
+				<Entry varId="useIsWeapon" value="false"/>
+				<Entry varId="useIsUpgrade" value="false"/>
+				<Entry varId="useIsFood" value="false"/>
+				<Entry varId="useIsFormula" value="true"/>
+				<Entry varId="useIsReadable" value="false"/>
+				<Entry varId="useIsIngredient" value="true"/>
+				<Entry varId="useIsMoney" value="false"/>
+				<Entry varId="useIsNotJunk" value="false"/>
+				<Entry varId="useWeight" value="false"/>
+				<Entry varId="useValue" value="false"/>
+				<Entry varId="useItemQuality" value="false"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="useIsArmor" displayName="ahdal_armorToggle" displayType="TOGGLE" />
+			<Var id="useIsWeapon" displayName="ahdal_weaponToggle" displayType="TOGGLE" />
+			<Var id="useIsUpgrade" displayName="ahdal_upgradeToggle" displayType="TOGGLE" />
+			<Var id="useIsFood" displayName="ahdal_foodToggle" displayType="TOGGLE" />
+			<Var id="useIsFormula" displayName="ahdal_formulaToggle" displayType="TOGGLE" />
+			<Var id="useIsReadable" displayName="ahdal_readableToggle" displayType="TOGGLE" />
+			<Var id="useIsIngredient" displayName="ahdal_ingredientToggle" displayType="TOGGLE" />
+			<Var id="useIsMoney" displayName="ahdal_moneyToggle" displayType="TOGGLE" />
+			<Var id="useIsNotJunk" displayName="ahdal_notJunkToggle" displayType="TOGGLE" />
+			<Var id="useWeight" displayName="ahdal_weightToggle" displayType="TOGGLE" />
+			<Var id="weightAmount" displayName="ahdal_weightAmount" displayType="SLIDER;0;100;100" />
+			<Var id="Virtual_weightLogic" displayName="ahdal_weightLogic" displayType="OPTIONS" >
+				<OptionsArray>
+					<Option id="0" displayName="ahdal_slidersLess">
+						<Entry varId="weightLogic" value="0"/>
+					</Option>
+					<Option id="1" displayName="ahdal_slidersExact">
+						<Entry varId="weightLogic" value="1"/>
+					</Option>
+					<Option id="2" displayName="ahdal_slidersGreater">
+						<Entry varId="weightLogic" value="2"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="useValue" displayName="ahdal_valueToggle" displayType="TOGGLE" />
+			<Var id="valueAmount" displayName="ahdal_valueThreshold" displayType="SLIDER;1;10000;9999" />
+			<Var id="Virtual_valueLogic" displayName="ahdal_valueLogic" displayType="OPTIONS" >
+				<OptionsArray>
+					<Option id="0" displayName="ahdal_slidersLess">
+						<Entry varId="valueLogic" value="0"/>
+					</Option>
+					<Option id="1" displayName="ahdal_slidersExact">
+						<Entry varId="valueLogic" value="1"/>
+					</Option>
+					<Option id="2" displayName="ahdal_slidersGreater">
+						<Entry varId="valueLogic" value="2"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="useItemQuality" displayName="ahdal_qualityToggle" displayType="TOGGLE" />
+			<Var id="Virtual_qualityThreshold" displayName="ahdal_qualityThreshold" displayType="OPTIONS" >
+				<OptionsArray>
+					<Option id="0" displayName="ahdal_qualityCommon">
+						<Entry varId="qualityThreshold" value="0"/>
+					</Option>
+					<Option id="1" displayName="ahdal_qualityMaster">
+						<Entry varId="qualityThreshold" value="1"/>
+					</Option>
+					<Option id="2" displayName="ahdal_qualityMagic">
+						<Entry varId="qualityThreshold" value="2"/>
+					</Option>
+					<Option id="3" displayName="ahdal_qualityRelic">
+						<Entry varId="qualityThreshold" value="3"/>
+					</Option>
+					<Option id="4" displayName="ahdal_qualityWitcher">
+						<Entry varId="qualityThreshold" value="4"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+			<Var id="Virtual_qualityLogic" displayName="ahdal_qualityLogic" displayType="OPTIONS" >
+				<OptionsArray>
+					<Option id="0" displayName="ahdal_slidersLess">
+						<Entry varId="qualityLogic" value="0"/>
+					</Option>
+					<Option id="1" displayName="ahdal_slidersExact">
+						<Entry varId="qualityLogic" value="1"/>
+					</Option>
+					<Option id="2" displayName="ahdal_slidersGreater">
+						<Entry varId="qualityLogic" value="2"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+		</VisibleVars>
+	</Group>
+	<Group id="AHDAutoLoot_radius" displayName="Mods.ahdal_modName.ahdal_radius">
+		<PresetsArray>
+			<Preset id="0" displayName="ahdal_default">
+				<Entry varId="enableRadiusLootCombat" value="false"/>
+				<Entry varId="radiusLootMaxDistance" value="10"/>
+				<Entry varId="radiusMaxContainers" value="20"/>
+			</Preset>
+			<Preset id="1" displayName="ahdal_light">
+				<Entry varId="enableRadiusLootCombat" value="false"/>
+				<Entry varId="radiusLootMaxDistance" value="8"/>
+				<Entry varId="radiusMaxContainers" value="25"/>
+			</Preset>
+			<Preset id="2" displayName="ahdal_normal">
+				<Entry varId="enableRadiusLootCombat" value="true"/>
+				<Entry varId="radiusLootMaxDistance" value="15"/>
+				<Entry varId="radiusMaxContainers" value="50"/>
+			</Preset>
+			<Preset id="3" displayName="ahdal_ultra">
+				<Entry varId="enableRadiusLootCombat" value="true"/>
+				<Entry varId="radiusLootMaxDistance" value="30"/>
+				<Entry varId="radiusMaxContainers" value="100"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="enableRadiusLootCombat" displayName="ahdal_radiusCombat" displayType="TOGGLE" />
+			<Var id="radiusLootMaxDistance" displayName="ahdal_radiusDistance" displayType="SLIDER;1;30;29" />
+			<Var id="radiusMaxContainers" displayName="ahdal_radiusMaxContainers" displayType="SLIDER;1;100;99" />
+		</VisibleVars>
+	</Group>
+	<Group id="AHDAutoLoot_true" displayName="Mods.ahdal_modName.ahdal_trueloot">
+		<PresetsArray>
+			<Preset id="0" displayName="ahdal_default">
+				<Entry varId="enableTrueAutoLoot" value="false"/>
+				<Entry varId="enableTrueAutoLootOnStart" value="false"/>
+				<Entry varId="enableTrueAutoLootCombat" value="false"/>
+				<Entry varId="trueAutoLootTime" value="5"/>
+				<Entry varId="trueAutoLootMaxDistance" value="10"/>
+				<Entry varId="trueAutoLootMaxContainers" value="20"/>
+			</Preset>
+			<Preset id="1" displayName="ahdal_light">
+				<Entry varId="enableTrueAutoLoot" value="true"/>
+				<Entry varId="enableTrueAutoLootOnStart" value="false"/>
+				<Entry varId="enableTrueAutoLootCombat" value="false"/>
+				<Entry varId="trueAutoLootTime" value="5"/>
+				<Entry varId="trueAutoLootMaxDistance" value="5"/>
+				<Entry varId="trueAutoLootMaxContainers" value="25"/>
+			</Preset>
+			<Preset id="2" displayName="ahdal_normal">
+				<Entry varId="enableTrueAutoLoot" value="true"/>
+				<Entry varId="enableTrueAutoLootOnStart" value="false"/>
+				<Entry varId="enableTrueAutoLootCombat" value="true"/>
+				<Entry varId="trueAutoLootTime" value="4"/>
+				<Entry varId="trueAutoLootMaxDistance" value="10"/>
+				<Entry varId="trueAutoLootMaxContainers" value="50"/>
+			</Preset>
+			<Preset id="3" displayName="ahdal_ultra">
+				<Entry varId="enableTrueAutoLoot" value="true"/>
+				<Entry varId="enableTrueAutoLootOnStart" value="true"/>
+				<Entry varId="enableTrueAutoLootCombat" value="true"/>
+				<Entry varId="trueAutoLootTime" value="2"/>
+				<Entry varId="trueAutoLootMaxDistance" value="30"/>
+				<Entry varId="trueAutoLootMaxContainers" value="100"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="enableTrueAutoLoot" displayName="ahdal_trueAutoLootToggle" displayType="TOGGLE" />
+			<Var id="enableTrueAutoLootOnStart" displayName="ahdal_trueAutoLootOnStartToggle" displayType="TOGGLE" />
+			<Var id="enableTrueAutoLootCombat" displayName="ahdal_trueAutoLootCombat" displayType="TOGGLE" />
+			<Var id="trueAutoLootTime" displayName="ahdal_trueAutoLootTime" displayType="SLIDER;2;20;18" />
+			<Var id="trueAutoLootMaxDistance" displayName="ahdal_trueAutoLootDistance" displayType="SLIDER;1;30;29" />
+			<Var id="trueAutoLootMaxContainers" displayName="ahdal_trueAutoLootMaxContainers" displayType="SLIDER;1;100;99" />
+			<Var id="isLoaded" displayName="isLoaded" displayType="TOGGLE" visibilityCondition="hideAlways" />
+		</VisibleVars>
+	</Group>
+	<Group id="AHDAutoLoot_notifications" displayName="Mods.ahdal_modName.ahdal_notifications">
+		<PresetsArray>
+			<Preset id="0" displayName="ahdal_default">
+				<Entry varId="enableNotification" value="true"/>
+				<Entry varId="hideNotificationCombat" value="true"/>
+				<Entry varId="useNewNotification" value="true"/>
+				<Entry varId="useNotificationQuantity" value="true"/>
+				<Entry varId="notificationTime" value="5"/>
+				<Entry varId="notificationTimeAddPerItem" value="150"/>
+				<Entry varId="notificationFontSize" value="24"/>
+				<Entry varId="useNotificationImage" value="true"/>
+				<Entry varId="useNotificationDesc" value="true"/>
+				<Entry varId="enableColors" value="true"/>
+				<Entry varId="enableLootSound" value="true"/>
+			</Preset>
+			<Preset id="1" displayName="ahdal_light">
+				<Entry varId="enableNotification" value="true"/>
+				<Entry varId="hideNotificationCombat" value="true"/>
+				<Entry varId="useNewNotification" value="true"/>
+				<Entry varId="useNotificationQuantity" value="false"/>
+				<Entry varId="notificationFontSize" value="20"/>
+				<Entry varId="useNotificationImage" value="false"/>
+				<Entry varId="useNotificationDesc" value="false"/>
+				<Entry varId="enableColors" value="false"/>
+				<Entry varId="enableLootSound" value="true"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="enableNotification" displayName="ahdal_notificationsToggle" displayType="TOGGLE" />
+			<Var id="enableLootSound" displayName="ahdal_soundToggle" displayType="TOGGLE" />
+			<Var id="hideNotificationCombat" displayName="ahdal_notificationCombatToggle" displayType="TOGGLE" />
+			<Var id="useNewNotification" displayName="ahdal_notificationsUseNew" displayType="TOGGLE" />
+			<Var id="useNotificationImage" displayName="ahdal_notificationsUseImage" displayType="TOGGLE" />
+			<Var id="useNotificationDesc" displayName="ahdal_notificationsUseDesc" displayType="TOGGLE" />
+			<Var id="notificationTime" displayName="ahdal_notificationsTime" displayType="SLIDER;1;15;14" />
+			<Var id="notificationTimeAddPerItem" displayName="ahdal_notificationsTimeAddPerItem" displayType="SLIDER;0;500;500" />
+			<Var id="notificationFontSize" displayName="ahdal_notificationsFontSize" displayType="SLIDER;14;34;20" />
+			<Var id="useNotificationQuantity" displayName="ahdal_notificationsUseQuantity" displayType="TOGGLE" />
+			<Var id="enableColors" displayName="ahdal_colorToggle" displayType="TOGGLE" />
+			<Var id="isLoaded" displayName="isLoaded" displayType="TOGGLE" visibilityCondition="hideAlways" />
+		</VisibleVars>
+	</Group>
+</UserConfig>

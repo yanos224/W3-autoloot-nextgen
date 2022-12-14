@@ -1,0 +1,4 @@
+			<!-- AutoLoot Begin -->
+			<Var builder="Input" id="AutoLootRadius" displayName="ahdal_keyRadius" displayType="INPUTPC" actions="AutoLootRadius"/>
+			<Var builder="Input" id="ToggleTrueAutoLoot" displayName="ahdal_keyTrue" displayType="INPUTPC" actions="ToggleTrueAutoLoot"/>
+			<!-- AutoLoot End -->

@@ -1,0 +1,12 @@
+[Exploration]
+IK_U=(Action=AutoLootRadius)
+IK_Y=(Action=ToggleTrueAutoLoot)
+[Horse]
+IK_U=(Action=AutoLootRadius)
+IK_Y=(Action=ToggleTrueAutoLoot)
+[Combat]
+IK_U=(Action=AutoLootRadius)
+IK_Y=(Action=ToggleTrueAutoLoot)
+[Swimming]
+IK_U=(Action=AutoLootRadius)
+IK_Y=(Action=ToggleTrueAutoLoot)
